@@ -1,2 +1,2 @@
-# ml_from_scratch
+# ML From Scratch
 Some fundamental ML algorithms built from numpy.
