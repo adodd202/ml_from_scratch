@@ -8,8 +8,8 @@ import numpy as np
 
 class LogisticRegression():
 	"""
-	This class assumes numpy data and uses gradient descent to fit a distribution,
-	training a linear regressor.
+	This class assumes numpy data and uses gradient descent to do MLE
+	for logistic regression
 	"""
 
 	def __init__(self):
@@ -46,7 +46,7 @@ class LogisticRegression():
 		return gradient
 
 
-	def fit(self, X, y):
+	def fit(self, X, y, verbose):
 		"""
 		Expects data in shape (n, f), where n is the number of observations, 
 		and f is the number of features.
@@ -64,4 +64,4 @@ class LogisticRegression():
 		for i in range(self.iters):
 			self.theta -= self.gradient_update(X, y)
 			cost = self.cost(X, y)
-			print("Epoch: {}, Loss: {}".format(i, cost))
+			# print("Epoch: {}, Loss: {}".format(i, cost))

@@ -9,7 +9,7 @@ class LinearRegression():
 	def __init__(self):
 		pass
 
-	def fit(self, X, y):
+	def fit(self, X, y, verbose):
 		"""
 		Expects data in shape (n, f), where n is the number of observations, 
 		and f is the number of features.
@@ -35,7 +35,7 @@ class LinearRegression():
 			grad_theta = - 1/m * np.transpose(np.matmul(y_delta, X))
 			theta = theta - alpha * 1/m * grad_theta
 			loss = 1/m * np.sum(np.square((y - y_pred)))
-			print("Epoch: {}, Loss: {}".format(i, loss))
+			# print("Epoch: {}, Loss: {}".format(i, loss))
 
 		self.theta = theta
 
